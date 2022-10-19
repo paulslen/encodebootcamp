@@ -12,7 +12,14 @@ contract BootcampContract {
 	deployer = msg.sender;
 }
 	
-
+    function getOwner() external returns (address){
+        if(deployer == msg.sender){
+            return 0x000000000000000000000000000000000000dEaD;
+        }
+        else {
+            return deployer;
+        }
+    }
 
     function store(uint256 num) public {
         number = num;
