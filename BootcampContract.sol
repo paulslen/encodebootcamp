@@ -12,7 +12,7 @@ contract BootcampContract {
 	deployer = msg.sender;
     }
 	
-    function getOwner() external returns (address){
+    function getOwner() external view returns (address){
         if(deployer == msg.sender){
             return 0x000000000000000000000000000000000000dEaD;
         }
